@@ -1,9 +1,8 @@
 import java.util.ArrayDeque;
 
 public class PortManager {
-    private ArrayDeque<Continer> containerStack = new ArrayDeque<>();
-    private ArrayDeque<Ship> shipQueue = new ArrayDeque<>();
-
+   private Stack<Continer> containerStack = new Stack<>();
+	    private Queue<Ship> shipQueue = new LinkedList<>();
     // Store a container
 public void storeContainer(Continer cont) {
     containerStack.push(cont);
@@ -60,3 +59,4 @@ public void loadNextShip() {
     System.out.println("Remaining ships waiting: " + shipQueue.size());
     }
 }
+
